@@ -1,0 +1,17 @@
+forbiten:
+  - names:
+    - gpio_get
+    error_text: Você não deve fazer pooling no pino, deve utilizar interrupcão para ler os pinos.
+
+shall_have:
+  - names:
+      - xSemaphoreTrigger
+      - xQueueTime
+      - xQueueDistance
+    error_text: O seu código deve necessariamente fazer uso desses recursos do rtos (com os nomes do readme)
+
+  - names:
+      - trigger_task
+      - echo_task
+      - oled_task
+    error_text: Você deve serguir a estrutura do diagrama (task)

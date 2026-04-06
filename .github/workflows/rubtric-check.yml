@@ -1,0 +1,14 @@
+name: rubric-check
+
+on:
+  push:
+
+jobs:
+  rubric-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: insper-embarcados/actions-firmware-rubric-check@v0
+        with:
+          c_file: main/main.c
+          rubric_file: rubric_firmware.yml
